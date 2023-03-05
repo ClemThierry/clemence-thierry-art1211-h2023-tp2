@@ -275,3 +275,42 @@ header {
 #gridGalleryArticles>div>h3 {
     padding: 0 10px 0 10px;
 }
+
+/**/
+
+#formContact{
+    background-color: var(--light-green);
+    padding: 2vw 15vw 2vw 15vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    text-align: center;
+}
+
+#formContact>form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#formContact>form>input{
+    border: none;
+    margin: 5px 0 5px 0;
+    min-width: 20vw;
+    padding: 10px;
+}
+
+#formContact>form>input[type="submit"]{
+    font-family: 'Gilda Display', serif;
+}
+
+/**/
+
+#photoGallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#photoGallery>img{
+    width: 100%;
+}
