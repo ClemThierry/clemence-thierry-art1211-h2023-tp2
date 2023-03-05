@@ -1,0 +1,277 @@
+:root {
+    --text-color: #373737;
+    --dark-green: #314C3F;
+    --medium-green: #8E9685;
+    --light-green: #C6CAC3;
+    --medium-beige: #D4B6AA;
+    --light-beige: #F8F7F6;
+    --light-brown: #D5CCC2;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gilda Display', serif;
+    color: var(--text-color);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+p,
+ul {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+}
+
+h2 {
+    font-size: 34px;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 24px;
+    letter-spacing: 0.25px;
+}
+
+
+/*Banner*/
+
+#banner {
+    background-color: #314C3F;
+    color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 8px;
+}
+
+#banner>* {
+    height: fit-content;
+    font-size: smaller;
+}
+
+button,
+input[type=button],
+input[type=submit] {
+    background-color: var(--medium-green);
+    color: white;
+    padding: 6px 8px;
+    margin-left: 10px;
+    border: none;
+}
+
+
+/*Header*/
+
+#navContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+#socialIconContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 15vw;
+}
+
+#socialIconContainer>img {
+    width: 18px;
+    height: 18px;
+    margin: auto;
+}
+
+#navContainer>nav {
+    width: 40vw;
+}
+
+#navContainer>nav>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#searchInputContainer {
+    width: 15vw;
+}
+
+#searchInputContainer>input {
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+
+/*Title*/
+
+header {
+    padding: 0 5vh 0 5vh;
+    text-align: center;
+    font-size: 38px;
+    font-weight: lighter;
+    text-transform: lowercase;
+}
+
+
+/*Articles gallery*/
+
+.articlesGallery {
+    display: flex;
+    justify-content: center;
+    gap: 4vh;
+    padding: 0 30vh 10vh 30vh;
+}
+
+.cardWithText {
+    position: relative;
+}
+
+.cardWithText>img {
+    width: 100%;
+    height: auto;
+}
+
+.cardWithText>div {
+    position: absolute;
+    left: 2vh;
+    bottom: 2vh;
+    right: 2vh;
+    background-color: white;
+    text-align: center;
+    padding: 0 7px 0 7px;
+}
+
+
+/**/
+
+#emailListSection {
+    background-color: var(--light-beige);
+    text-align: center;
+    padding: 40px 40px 60px;
+}
+
+#emailListSection>form {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#emailListSection input {
+    border: none;
+    color: #404040;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 25px;
+    margin-right: 10px;
+    width: 15%;
+}
+
+#emailListSection input[type="button"] {
+    color: white;
+    font-family: 'Gilda Display', serif;
+    font-size: 1.1em;
+}
+
+
+/**/
+
+#articlesPreview {
+    padding: 100px 0;
+    margin: auto;
+    width: 50vw;
+}
+
+#articlesPreview>.article {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    column-gap: 50px;
+    margin: 40px auto;
+}
+
+#articlesPreview>.article:nth-child(2n) {
+    text-align: right;
+}
+
+#articlesPreview>.article>div {
+    grid-column: span 2;
+}
+
+#articlesPreview>.article>img {
+    max-width: 100%;
+}
+
+#articlesPreview>.article>div>p:nth-child(2n+1) {
+    line-height: 1.75;
+    letter-spacing: 0.25px;
+}
+
+#articlesPreview>.article>div>.date {
+    font-size: 14px;
+}
+
+#articlesPreview>.article>div>button {
+    font-family: 'Gilda Display', serif;
+    text-transform: lowercase;
+    font-weight: normal !important;
+    font-size: 18px;
+    padding: 15px 40px;
+    margin-top: 30px;
+}
+
+
+/**/
+
+#latestNews {
+    text-align: center;
+    background: linear-gradient(180deg, #e7e2dc 0%, #e7e2dc 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+#latestNews>h2 {
+    padding: 50px 0 20px 0;
+}
+
+#latestNews>.articlesGallery>.cardWithText {
+    border: 7px solid white;
+}
+
+
+/**/
+
+#separator {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+#separator>.line {
+    border: var(--light-green) 1px solid;
+    width: 70vw;
+    margin: 4px auto 4px auto;
+}
+
+
+/**/
+
+#sectionGridGallery {
+    text-align: center;
+}
+
+#gridGalleryArticles {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80vw;
+    gap: 40px;
+}
+
+#gridGalleryArticles>div>img {
+    max-width: 100%;
+}
+
+#gridGalleryArticles>div>h3 {
+    padding: 0 10px 0 10px;
+}
