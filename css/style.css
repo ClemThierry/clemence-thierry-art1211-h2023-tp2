@@ -77,6 +77,18 @@ input[type=submit] {
     padding: 6px 8px;
     margin-left: 10px;
     border: none;
+    transition-duration: 1s;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+    transform: scale(1.1);
+    transition-duration: .4s;
+}
+
+input:focus {
+    outline: none;
 }
 
 
@@ -123,9 +135,21 @@ nav>ul {
     width: 15vw;
 }
 
-#searchInputContainer>input {
-    border: none;
+#searchInputContainer>div {
+    display: flex;
     border-bottom: solid 1px black;
+    align-items: baseline;
+}
+
+#searchInputContainer>div>input {
+    border: none;
+    padding: 5px;
+    width: 100%;
+}
+
+#searchInputContainer>div>img {
+    height: 100%;
+    margin-left: 5px;
 }
 
 
@@ -151,6 +175,12 @@ header {
 
 .cardWithText {
     position: relative;
+    transition-duration: 1s;
+}
+
+.cardWithText:hover {
+    transform: scale(1.1);
+    transition-duration: .4s;
 }
 
 .cardWithText>img {
@@ -169,7 +199,7 @@ header {
 }
 
 
-/**/
+/*Email Section*/
 
 #emailListSection {
     background-color: var(--light-beige);
@@ -200,7 +230,7 @@ header {
 }
 
 
-/**/
+/*Article preview section*/
 
 #articlesPreview {
     padding: 100px 0;
@@ -247,7 +277,7 @@ header {
 }
 
 
-/**/
+/*Blog news section*/
 
 #latestNews {
     text-align: center;
@@ -263,7 +293,7 @@ header {
 }
 
 
-/**/
+/*Separator*/
 
 #separator {
     display: flex;
@@ -278,7 +308,7 @@ header {
 }
 
 
-/**/
+/*Gallery section*/
 
 #sectionGridGallery {
     text-align: center;
@@ -294,6 +324,22 @@ header {
 }
 
 #gridGalleryArticles>div>img {
+    transition-duration: 1s;
+}
+
+#gridGalleryArticles>div:nth-child(2n)>img:hover {
+    transform: scale(1.1) rotateZ(-6deg);
+}
+
+#gridGalleryArticles>div:nth-child(2n+1)>img:hover {
+    transform: scale(1.1) rotateZ(6deg);
+}
+
+#gridGalleryArticles>div>img:hover {
+    transition-duration: .4s;
+}
+
+#gridGalleryArticles>div>img {
     max-width: 100%;
 }
 
@@ -302,7 +348,7 @@ header {
 }
 
 
-/**/
+/*Contact form section*/
 
 #formContact {
     background-color: var(--light-green);
@@ -331,7 +377,7 @@ header {
 }
 
 
-/**/
+/*Photo gallery banner*/
 
 #photoGallery {
     display: flex;
@@ -342,7 +388,6 @@ header {
 
 #photoGallery>div {
     width: calc(100vw / 7);
-    /* background-image: url("http://june.codedcreative.co/wp-content/uploads/sites/17/2020/06/ellieelien-i3A_RwLJKeo-unsplash.jpg"); */
     background-size: cover;
     background-color: #314C3F;
 }
@@ -381,7 +426,7 @@ header {
 }
 
 
-/**/
+/*Amazon banner*/
 
 #amazonBanner {
     background-color: var(--medium-beige);
@@ -396,7 +441,7 @@ header {
 }
 
 
-/**/
+/*Footer*/
 
 footer {
     display: flex;
